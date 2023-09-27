@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+  background-color: #f8f9fd;
+  padding: 40px;
+  margin-left: 80px;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+input[type="checkbox"]:checked {
+  filter: invert(24%) sepia(85%) saturate(1813%) hue-rotate(206deg) brightness(98%) contrast(500%);
+}
+
+#sidebar {
+  height: 100vh;
+  width: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+#sidebar li {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+#sidebar li:nth-last-of-type(2) {
+  margin-top: auto;
+}
+#sidebar li:hover,
+#searchbar li:hover {
+  cursor: pointer;
+  background-color: #edf2ff;
+}
+#sidebar li:hover img,
+#searchbar li:hover img:not(:last-child) {
+  filter: invert(17%) sepia(65%) saturate(5754%) hue-rotate(228deg) brightness(91%) contrast(84%);
+}
+#sidebar li img,
+#searchbar li img {
+  transition: 0.3s ease-in-out;
+  width: 24px;
+  height: 24px;
+}
+#filter li {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 3px;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+#filter li :first-child {
+  margin-right: 10px;
+}
+
+#filter li:not(:last-of-type) :last-child {
+  margin-left: auto;
+}
+
+#searchbar {
+  display: flex;
+}
+#searchbar li {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+#searchbar li:not(:last-child) {
+  margin-right: 20px;
+}
+
+#searchbar li:last-child {
+  width: auto;
+  padding: 0;
+  background-color: #1d5ecd;
+  height: fit-content;
+}
+#searchbar li:last-child button {
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 8px;
+  padding-right: 10px;
+  font-size: 13px;
+}
+
+.slide {
+  transform: translateX(0);
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}
